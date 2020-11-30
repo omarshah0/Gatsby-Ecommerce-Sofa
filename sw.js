@@ -26,7 +26,7 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-93cae85dfe40e4aa12e7.js"
+    "url": "webpack-runtime-43e1b9dd349aeaab46d1.js"
   },
   {
     "url": "styles-540f25bd5e5cb35d6f53.js"
@@ -35,7 +35,7 @@ self.__precacheManifest = [
     "url": "framework-beda7bde9d7dca0755ce.js"
   },
   {
-    "url": "app-1cff73d76755c7ab96ae.js"
+    "url": "app-825b7afb3c37c7abf69e.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-36dc033f967ae9fe9cda.js"
@@ -45,15 +45,19 @@ self.__precacheManifest = [
     "revision": "bd08cf640736bf3cebcb8143eab8950f"
   },
   {
+    "url": "page-data/sq/d/409475740.json",
+    "revision": "20ee977db0a184cb730887fe5401d218"
+  },
+  {
     "url": "page-data/app-data.json",
-    "revision": "3d78a9efe885e22396cf39d6e20f7f12"
+    "revision": "eaf2834d79ed9bd08454e2cc2799e900"
   },
   {
     "url": "polyfill-2355dfec31f56614e456.js"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "1f76ab5a0a0415bbea73e43b130261ac"
+    "revision": "82741d4f3c7a2956b611ac61c4392eca"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
@@ -72,12 +76,12 @@ const { NavigationRoute } = workbox.routing
 
 const navigationRoute = new NavigationRoute(async ({ event }) => {
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^`), ``)
+  pathname = pathname.replace(new RegExp(`^/Gatsby-Ecommerce-Sofa`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-1cff73d76755c7ab96ae.js`))) {
+  if (!resources || !(await caches.match(`/Gatsby-Ecommerce-Sofa/app-825b7afb3c37c7abf69e.js`))) {
     return await fetch(event.request)
   }
 
@@ -90,7 +94,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/Gatsby-Ecommerce-Sofa/offline-plugin-app-shell-fallback/index.html`
   return await caches.match(offlineShell)
 })
 
