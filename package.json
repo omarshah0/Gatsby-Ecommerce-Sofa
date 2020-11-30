@@ -37,6 +37,7 @@
     "uuid": "^3.4.0"
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "prettier": "^1.19.1"
   },
   "keywords": [
