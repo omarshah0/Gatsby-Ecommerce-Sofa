@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
+    pathPrefix: "/Gatsby-Ecommerce-Sofa",
     title: `Gatsby JAMstack ECommerce Professional`,
     description: `Get up and running with your next E Commerce Website.`,
-    author: `@dabit3`,
+    author: `@omarfarooqshah`,
   },
   plugins: [
     {
